@@ -20,20 +20,21 @@
     var CONFIG = {"hostname":"localhost","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="唐诗锄禾锄禾日当午，汗滴禾下土。谁知盘中餐，粒粒皆辛苦。 静夜思床前明月光，疑是地上霜。举头望明月，低头思故乡。 将进酒君不见黄河之水天上来，奔流到海不复回。君不见高堂明镜悲白发，朝如青丝暮成雪。人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。烹羊宰牛且为乐，会须一饮三百杯。岑夫子，丹丘生，将进酒，杯莫停。与君歌一曲，请君为我倾耳听。钟鼓馔玉不足贵，但愿长醉不愿醒。古来圣贤皆寂寞，">
+  <meta name="description" content="常见文件系统extLinux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用  ext2ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB&#x3D;1024GB&#x3D;1024×1024KB）  ext3ext2 文件系统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux复习">
-<meta property="og:url" content="http://localhost/2020/12/28/linux-1/index.html">
+<meta property="og:title" content="linux磁盘管理">
+<meta property="og:url" content="http://localhost/2020/12/28/linux1/index.html">
 <meta property="og:site_name" content="Hello Traveler">
-<meta property="og:description" content="唐诗锄禾锄禾日当午，汗滴禾下土。谁知盘中餐，粒粒皆辛苦。 静夜思床前明月光，疑是地上霜。举头望明月，低头思故乡。 将进酒君不见黄河之水天上来，奔流到海不复回。君不见高堂明镜悲白发，朝如青丝暮成雪。人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。烹羊宰牛且为乐，会须一饮三百杯。岑夫子，丹丘生，将进酒，杯莫停。与君歌一曲，请君为我倾耳听。钟鼓馔玉不足贵，但愿长醉不愿醒。古来圣贤皆寂寞，">
+<meta property="og:description" content="常见文件系统extLinux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用  ext2ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB&#x3D;1024GB&#x3D;1024×1024KB）  ext3ext2 文件系统">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-27T16:49:50.000Z">
-<meta property="article:modified_time" content="2020-12-28T02:00:38.104Z">
+<meta property="article:modified_time" content="2020-12-28T02:34:10.066Z">
 <meta property="article:author" content="zyh">
 <meta property="article:tag" content="linux">
+<meta property="article:tag" content="磁盘管理">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://localhost/2020/12/28/linux-1/">
+<link rel="canonical" href="http://localhost/2020/12/28/linux1/">
 
 
 <script id="page-configurations">
@@ -46,7 +47,7 @@
   };
 </script>
 
-  <title>linux复习 | Hello Traveler</title>
+  <title>linux磁盘管理 | Hello Traveler</title>
   
 
 
@@ -161,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://localhost/2020/12/28/linux-1/">
+    <link itemprop="mainEntityOfPage" href="http://localhost/2020/12/28/linux1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -174,7 +175,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          linux复习
+          linux磁盘管理
         </h1>
 
         <div class="post-meta">
@@ -185,7 +186,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-12-28 00:49:50 / 修改时间：10:00:38" itemprop="dateCreated datePublished" datetime="2020-12-28T00:49:50+08:00">2020-12-28</time>
+              <time title="创建时间：2020-12-28 00:49:50 / 修改时间：10:34:10" itemprop="dateCreated datePublished" datetime="2020-12-28T00:49:50+08:00">2020-12-28</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -194,6 +195,10 @@
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E6%8A%80%E8%83%BD/" itemprop="url" rel="index"><span itemprop="name">技能</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E8%83%BD/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
                 </span>
             </span>
 
@@ -208,18 +213,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="唐诗"><a href="#唐诗" class="headerlink" title="唐诗"></a>唐诗</h2><h3 id="锄禾"><a href="#锄禾" class="headerlink" title="锄禾"></a>锄禾</h3><p>锄禾日当午，汗滴禾下土。<br>谁知盘中餐，粒粒皆辛苦。</p>
-<h3 id="静夜思"><a href="#静夜思" class="headerlink" title="静夜思"></a>静夜思</h3><p>床前明月光，疑是地上霜。<br>举头望明月，低头思故乡。</p>
-<h3 id="将进酒"><a href="#将进酒" class="headerlink" title="将进酒"></a>将进酒</h3><p>君不见黄河之水天上来，奔流到海不复回。<br>君不见高堂明镜悲白发，朝如青丝暮成雪。<br>人生得意须尽欢，莫使金樽空对月。<br>天生我材必有用，千金散尽还复来。<br>烹羊宰牛且为乐，会须一饮三百杯。<br>岑夫子，丹丘生，将进酒，杯莫停。<br>与君歌一曲，请君为我倾耳听。<br>钟鼓馔玉不足贵，但愿长醉不愿醒。<br>古来圣贤皆寂寞，惟有饮者留其名。<br>陈王昔时宴平乐，斗酒十千恣欢谑。<br>主人何为言少钱，径须沽取对君酌。<br>五花马、千金裘，呼儿将出换美酒，与尔同销万古愁</p>
-<h3 id="蜀道难"><a href="#蜀道难" class="headerlink" title="蜀道难"></a>蜀道难</h3><p>噫吁嚱，危乎高哉！<br>蜀道之难，难于上青天！<br>蚕丛及鱼凫，开国何茫然！<br>尔来四万八千岁，不与秦塞通人烟。<br>西当太白有鸟道，可以横绝峨眉巅。<br>地崩山摧壮士死，然后天梯石栈相钩连。<br>上有六龙回日之高标，下有冲波逆折之回川。<br>黄鹤之飞尚不得过，猿猱欲度愁攀援。<br>青泥何盘盘，百步九折萦岩峦。<br>扪参历井仰胁息，以手抚膺坐长叹。</p>
-<p>问君西游何时还？畏途巉岩不可攀。<br>但见悲鸟号古木，雄飞雌从绕林间。<br>又闻子规啼夜月，愁空山。<br>蜀道之难，难于上青天，使人听此凋朱颜！<br>连峰去天不盈尺，枯松倒挂倚绝壁。<br>飞湍瀑流争喧豗，砯崖转石万壑雷。<br>其险也如此，嗟尔远道之人胡为乎来哉！</p>
-<p>剑阁峥嵘而崔嵬，一夫当关，万夫莫开。<br>所守或匪亲，化为狼与豺。<br>朝避猛虎，夕避长蛇，磨牙吮血，杀人如麻。<br>锦城虽云乐，不如早还家。<br>蜀道之难，难于上青天，侧身西望长咨嗟！</p>
-<h2 id="宋词"><a href="#宋词" class="headerlink" title="宋词"></a>宋词</h2><h3 id="卜算子·咏梅"><a href="#卜算子·咏梅" class="headerlink" title="卜算子·咏梅"></a>卜算子·咏梅</h3><p>驿外断桥边，寂寞开无主。已是黄昏独自愁，更着风和雨。<br>无意苦争春，一任群芳妒。零落成泥碾作尘，只有香如故。</p>
-<h3 id="江城子·西城杨柳弄春柔"><a href="#江城子·西城杨柳弄春柔" class="headerlink" title="江城子·西城杨柳弄春柔"></a>江城子·西城杨柳弄春柔</h3><p>西城杨柳弄春柔，动离忧，泪难收。犹记多情、曾为系归舟。碧野朱桥当日事，人不见，水空流。<br>韶华不为少年留，恨悠悠，几时休？飞絮落花时候、一登楼。便作春江都是泪，流不尽，许多愁。</p>
-<h3 id="一剪梅·红藕香残玉簟秋"><a href="#一剪梅·红藕香残玉簟秋" class="headerlink" title="一剪梅·红藕香残玉簟秋"></a>一剪梅·红藕香残玉簟秋</h3><p>红藕香残玉簟秋。轻解罗裳，独上兰舟。云中谁寄锦书来？雁字回时，月满西楼。<br>花自飘零水自流。一种相思，两处闲愁。此情无计可消除，才下眉头，却上心头。</p>
-<h3 id="声声慢·寻寻觅觅"><a href="#声声慢·寻寻觅觅" class="headerlink" title="声声慢·寻寻觅觅"></a>声声慢·寻寻觅觅</h3><p>寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。三杯两盏淡酒，怎敌他、晚来风急！雁过也，正伤心，却是旧时相识。<br>满地黄花堆积，憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑！梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！</p>
-<h3 id="念奴娇·赤壁怀古"><a href="#念奴娇·赤壁怀古" class="headerlink" title="念奴娇·赤壁怀古"></a>念奴娇·赤壁怀古</h3><p>大江东去，浪淘尽，千古风流人物。<br>故垒西边，人道是，三国周郎赤壁。<br>乱石穿空，惊涛拍岸，卷起千堆雪。<br>江山如画，一时多少豪杰。</p>
-<p>遥想公瑾当年，小乔初嫁了，雄姿英发。<br>羽扇纶巾，谈笑间，樯橹灰飞烟灭。<br>故国神游，多情应笑我，早生华发。<br>人生如梦，一尊还酹江月。</p>
+        <h2 id="常见文件系统"><a href="#常见文件系统" class="headerlink" title="常见文件系统"></a>常见文件系统</h2><h3 id="ext"><a href="#ext" class="headerlink" title="ext"></a>ext</h3><p>Linux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用 </p>
+<h3 id="ext2"><a href="#ext2" class="headerlink" title="ext2"></a>ext2</h3><p>ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB=1024GB=1024×1024KB） </p>
+<h3 id="ext3"><a href="#ext3" class="headerlink" title="ext3"></a>ext3</h3><p>ext2 文件系统的升级版本，最大的区别就是带日志功能，以便在系统突然停止时提高文件系统的可靠性。支持最大 16TB 的分区和最大 2TB 的文件<br>ext4 是 ext3 文件系统的升级版。 ext4 在性能、 伸缩性和可靠性方面进行了大量改进。 ext4的变化可以说是翻天覆地的，比如向下兼容 ext3、最大 1EB 文件系统和 16TB 文件、无限数量子目录、 Extents 连续数据块概念、 多块分配、 延迟分配、 持久预分配、 快速 FSCK、日志校验、 无日志模式、 在线碎片整理、 inode 增强、 默认启用 barrier 等。 它是 CentOS 6.x 的默认文件系统 </p>
+<h3 id="xfs"><a href="#xfs" class="headerlink" title="xfs"></a>xfs</h3><p>XFS 最早针对 IRIX 操作系统开发， 是一个高性能的日志型文件系统， 能够在断电以及操作系统崩溃的情况下保证文件系统数据的一致性。它是一个 64 位的文件系统，后来进行开源并且移植到了 Linux 操作系统中，目前 CentOS 7.x 将 XFS+LVM（逻辑卷管理）作为默认的文件系统。据官方所称，XFS 对于大文件的读写性能较好。单个文件系统最大可以支持8EB，单个文件可以支持16TB </p>
+<h3 id="swap"><a href="#swap" class="headerlink" title="swap"></a>swap</h3><p>swap 是 Linux 中用于交换分区的文件系统（类似于 Windows 中的虚拟内存），当内存不够用时，使用交换分区暂时替代内存。一般大小为内存的 2 倍，但是不要超过 2GB。它是 Linux 的必需分区 </p>
+<h3 id="NFS"><a href="#NFS" class="headerlink" title="NFS"></a>NFS</h3><p>NFS 是网络文件系统（Network File System）的缩写，是用来实现不同主机之间文件共享的一种网络服务，本地主机可以通过挂载的方式使用远程共享的资源 </p>
+<h3 id="iso9660"><a href="#iso9660" class="headerlink" title="iso9660"></a>iso9660</h3><p>光盘的标准文件系统。Linux 要想使用光盘，必须支持 iso9660 文件系统 </p>
+<h3 id="fat"><a href="#fat" class="headerlink" title="fat"></a>fat</h3><p>Windows 下的 fat16 文件系统，在 Linux 中识别为 fat </p>
+<h3 id="vfat"><a href="#vfat" class="headerlink" title="vfat"></a>vfat</h3><p>Windows 下的 fat32 文件系统，在 Linux 中识别为 vfat。支持最大 32GB 的分区和最大 4GB 的文件 </p>
+<h3 id="NTFS"><a href="#NTFS" class="headerlink" title="NTFS"></a>NTFS</h3><p>Windows 下的 NTFS 文件系统，不过 Linux 默认是不能识别 NTFS 文件系统的，如果需要识别， 则需要重新编译内核才能支持。 它比 fat32 文件系统更加安全， 速度更快，支持最大 2TB 的分区和最大 64GB 的文件 </p>
+<h3 id="ufs"><a href="#ufs" class="headerlink" title="ufs"></a>ufs</h3><p>Sun 公司的操作系统 Solaris 和 SunOS 所采用的文件系统 </p>
+<h3 id="proc"><a href="#proc" class="headerlink" title="proc"></a>proc</h3><p>Linux 中基于内存的虚拟文件系统，用来管理内存存储目录/proc </p>
+<h3 id="sysfs"><a href="#sysfs" class="headerlink" title="sysfs"></a>sysfs</h3><p>和 proc 一样，也是基于内存的虚拟文件系统，用来管理内存存储目录/sys</p>
+<h3 id="tmpfs"><a href="#tmpfs" class="headerlink" title="tmpfs"></a>tmpfs</h3><p>也是一种基于内存的虚拟文件系统，不过也可以使用 swap 交换分区</p>
 
     </div>
 
@@ -230,6 +237,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" rel="tag"># 磁盘管理</a>
           </div>
 
         
@@ -238,11 +246,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/12/27/poem/" rel="prev" title="唐宋古诗词">
+    <a href="/2020/12/27/essay1/" rel="prev" title="唐宋古诗词">
       <i class="fa fa-chevron-left"></i> 唐宋古诗词
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/12/28/hexo-1/" rel="next" title="hexo_1">
+    <a href="/2020/12/28/hexo1/" rel="next" title="hexo_1">
       hexo_1 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -303,7 +311,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%94%90%E8%AF%97"><span class="nav-number">1.</span> <span class="nav-text">唐诗</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%84%E7%A6%BE"><span class="nav-number">1.1.</span> <span class="nav-text">锄禾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E5%A4%9C%E6%80%9D"><span class="nav-number">1.2.</span> <span class="nav-text">静夜思</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E8%BF%9B%E9%85%92"><span class="nav-number">1.3.</span> <span class="nav-text">将进酒</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9C%80%E9%81%93%E9%9A%BE"><span class="nav-number">1.4.</span> <span class="nav-text">蜀道难</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8B%E8%AF%8D"><span class="nav-number">2.</span> <span class="nav-text">宋词</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%9C%E7%AE%97%E5%AD%90%C2%B7%E5%92%8F%E6%A2%85"><span class="nav-number">2.1.</span> <span class="nav-text">卜算子·咏梅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E8%A5%BF%E5%9F%8E%E6%9D%A8%E6%9F%B3%E5%BC%84%E6%98%A5%E6%9F%94"><span class="nav-number">2.2.</span> <span class="nav-text">江城子·西城杨柳弄春柔</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E5%89%AA%E6%A2%85%C2%B7%E7%BA%A2%E8%97%95%E9%A6%99%E6%AE%8B%E7%8E%89%E7%B0%9F%E7%A7%8B"><span class="nav-number">2.3.</span> <span class="nav-text">一剪梅·红藕香残玉簟秋</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E5%A3%B0%E6%85%A2%C2%B7%E5%AF%BB%E5%AF%BB%E8%A7%85%E8%A7%85"><span class="nav-number">2.4.</span> <span class="nav-text">声声慢·寻寻觅觅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%B5%E5%A5%B4%E5%A8%87%C2%B7%E8%B5%A4%E5%A3%81%E6%80%80%E5%8F%A4"><span class="nav-number">2.5.</span> <span class="nav-text">念奴娇·赤壁怀古</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">常见文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ext"><span class="nav-number">1.1.</span> <span class="nav-text">ext</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ext2"><span class="nav-number">1.2.</span> <span class="nav-text">ext2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ext3"><span class="nav-number">1.3.</span> <span class="nav-text">ext3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xfs"><span class="nav-number">1.4.</span> <span class="nav-text">xfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swap"><span class="nav-number">1.5.</span> <span class="nav-text">swap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NFS"><span class="nav-number">1.6.</span> <span class="nav-text">NFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iso9660"><span class="nav-number">1.7.</span> <span class="nav-text">iso9660</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fat"><span class="nav-number">1.8.</span> <span class="nav-text">fat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vfat"><span class="nav-number">1.9.</span> <span class="nav-text">vfat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NTFS"><span class="nav-number">1.10.</span> <span class="nav-text">NTFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ufs"><span class="nav-number">1.11.</span> <span class="nav-text">ufs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#proc"><span class="nav-number">1.12.</span> <span class="nav-text">proc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sysfs"><span class="nav-number">1.13.</span> <span class="nav-text">sysfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tmpfs"><span class="nav-number">1.14.</span> <span class="nav-text">tmpfs</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -326,13 +334,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
