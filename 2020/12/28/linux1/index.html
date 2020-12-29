@@ -5,30 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="./images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="./lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"localhost","root":"./","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"localhost","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="常见文件系统extLinux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用  ext2ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB&#x3D;1024GB&#x3D;1024×1024KB）  ext3ext2 文件系统">
+  <meta name="description" content="常见文件系统 extLinux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用  ext2ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB&#x3D;1024GB&#x3D;1024×1024KB）  ext3ext2 文件系">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux磁盘管理">
 <meta property="og:url" content="http://localhost/2020/12/28/linux1/index.html">
 <meta property="og:site_name" content="Hello Traveler">
-<meta property="og:description" content="常见文件系统extLinux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用  ext2ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB&#x3D;1024GB&#x3D;1024×1024KB）  ext3ext2 文件系统">
+<meta property="og:description" content="常见文件系统 extLinux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用  ext2ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB&#x3D;1024GB&#x3D;1024×1024KB）  ext3ext2 文件系">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-27T16:49:50.000Z">
-<meta property="article:modified_time" content="2020-12-28T02:50:47.445Z">
+<meta property="article:modified_time" content="2020-12-29T04:45:59.220Z">
 <meta property="article:author" content="zyh">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="磁盘管理">
@@ -96,7 +96,7 @@
 
   <div class="site-meta">
 
-    <a href="./" class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">Hello Traveler</h1>
       <span class="logo-line-after"><i></i></span>
@@ -116,22 +116,22 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="./" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="./tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="./categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="./archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -165,7 +165,7 @@
     <link itemprop="mainEntityOfPage" href="http://localhost/2020/12/28/linux1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="./images/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="zyh">
       <meta itemprop="description" content="">
     </span>
@@ -184,17 +184,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-12-28 00:49:50 / 修改时间：10:50:47" itemprop="dateCreated datePublished" datetime="2020-12-28T00:49:50+08:00">2020-12-28</time>
+              <time title="创建时间：2020-12-28 00:49:50" itemprop="dateCreated datePublished" datetime="2020-12-28T00:49:50+08:00">2020-12-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-29 12:45:59" itemprop="dateModified" datetime="2020-12-29T12:45:59+08:00">2020-12-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="./categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
                 </span>
             </span>
 
@@ -209,31 +215,53 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="常见文件系统"><a href="#常见文件系统" class="headerlink" title="常见文件系统"></a>常见文件系统</h2><h3 id="ext"><a href="#ext" class="headerlink" title="ext"></a>ext</h3><p>Linux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用 </p>
-<h3 id="ext2"><a href="#ext2" class="headerlink" title="ext2"></a>ext2</h3><p>ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB=1024GB=1024×1024KB） </p>
-<h3 id="ext3"><a href="#ext3" class="headerlink" title="ext3"></a>ext3</h3><p>ext2 文件系统的升级版本，最大的区别就是带日志功能，以便在系统突然停止时提高文件系统的可靠性。支持最大 16TB 的分区和最大 2TB 的文件<br>ext4 是 ext3 文件系统的升级版。 ext4 在性能、 伸缩性和可靠性方面进行了大量改进。 ext4的变化可以说是翻天覆地的，比如向下兼容 ext3、最大 1EB 文件系统和 16TB 文件、无限数量子目录、 Extents 连续数据块概念、 多块分配、 延迟分配、 持久预分配、 快速 FSCK、日志校验、 无日志模式、 在线碎片整理、 inode 增强、 默认启用 barrier 等。 它是 CentOS 6.x 的默认文件系统 </p>
-<h3 id="xfs"><a href="#xfs" class="headerlink" title="xfs"></a>xfs</h3><p>XFS 最早针对 IRIX 操作系统开发， 是一个高性能的日志型文件系统， 能够在断电以及操作系统崩溃的情况下保证文件系统数据的一致性。它是一个 64 位的文件系统，后来进行开源并且移植到了 Linux 操作系统中，目前 CentOS 7.x 将 XFS+LVM（逻辑卷管理）作为默认的文件系统。据官方所称，XFS 对于大文件的读写性能较好。单个文件系统最大可以支持8EB，单个文件可以支持16TB </p>
-<h3 id="swap"><a href="#swap" class="headerlink" title="swap"></a>swap</h3><p>swap 是 Linux 中用于交换分区的文件系统（类似于 Windows 中的虚拟内存），当内存不够用时，使用交换分区暂时替代内存。一般大小为内存的 2 倍，但是不要超过 2GB。它是 Linux 的必需分区 </p>
-<h3 id="NFS"><a href="#NFS" class="headerlink" title="NFS"></a>NFS</h3><p>NFS 是网络文件系统（Network File System）的缩写，是用来实现不同主机之间文件共享的一种网络服务，本地主机可以通过挂载的方式使用远程共享的资源 </p>
-<h3 id="iso9660"><a href="#iso9660" class="headerlink" title="iso9660"></a>iso9660</h3><p>光盘的标准文件系统。Linux 要想使用光盘，必须支持 iso9660 文件系统 </p>
-<h3 id="fat"><a href="#fat" class="headerlink" title="fat"></a>fat</h3><p>Windows 下的 fat16 文件系统，在 Linux 中识别为 fat </p>
-<h3 id="vfat"><a href="#vfat" class="headerlink" title="vfat"></a>vfat</h3><p>Windows 下的 fat32 文件系统，在 Linux 中识别为 vfat。支持最大 32GB 的分区和最大 4GB 的文件 </p>
-<h3 id="NTFS"><a href="#NTFS" class="headerlink" title="NTFS"></a>NTFS</h3><p>Windows 下的 NTFS 文件系统，不过 Linux 默认是不能识别 NTFS 文件系统的，如果需要识别， 则需要重新编译内核才能支持。 它比 fat32 文件系统更加安全， 速度更快，支持最大 2TB 的分区和最大 64GB 的文件 </p>
-<h3 id="ufs"><a href="#ufs" class="headerlink" title="ufs"></a>ufs</h3><p>Sun 公司的操作系统 Solaris 和 SunOS 所采用的文件系统 </p>
-<h3 id="proc"><a href="#proc" class="headerlink" title="proc"></a>proc</h3><p>Linux 中基于内存的虚拟文件系统，用来管理内存存储目录/proc </p>
-<h3 id="sysfs"><a href="#sysfs" class="headerlink" title="sysfs"></a>sysfs</h3><p>和 proc 一样，也是基于内存的虚拟文件系统，用来管理内存存储目录/sys</p>
-<h3 id="tmpfs"><a href="#tmpfs" class="headerlink" title="tmpfs"></a>tmpfs</h3><p>也是一种基于内存的虚拟文件系统，不过也可以使用 swap 交换分区</p>
+        <h2 id="常见文件系统"><a href="#常见文件系统" class="headerlink" title="常见文件系统"></a>常见文件系统</h2><ul>
+<li><strong>ext</strong><br>Linux 中最早的文件系统，由于在性能和兼容性上具有很多缺陷，现在已经很少使用 </li>
+<li><strong>ext2</strong><br>ext 文件系统的升级版本，Red Hat Linux 7.2 版本以前的系统默认都是 ext2 文件系 统 。 于 1993 年 发 布 ， 支 持 最 大 16TB 的 分 区 和 最 大 2TB 的 文 件（1TB=1024GB=1024×1024KB） </li>
+<li><strong>ext3</strong><br>ext2 文件系统的升级版本，最大的区别就是带日志功能，以便在系统突然停止时提高文件系统的可靠性。支持最大 16TB 的分区和最大 2TB 的文件<br>ext4 是 ext3 文件系统的升级版。 ext4 在性能、 伸缩性和可靠性方面进行了大量改进。 ext4的变化可以说是翻天覆地的，比如向下兼容 ext3、最大 1EB 文件系统和 16TB 文件、无限数量子目录、 Extents 连续数据块概念、 多块分配、 延迟分配、 持久预分配、 快速 FSCK、日志校验、 无日志模式、 在线碎片整理、 inode 增强、 默认启用 barrier 等。 它是 CentOS 6.x 的默认文件系统 </li>
+<li><strong>xfs</strong><br>XFS 最早针对 IRIX 操作系统开发， 是一个高性能的日志型文件系统， 能够在断电以及操作系统崩溃的情况下保证文件系统数据的一致性。它是一个 64 位的文件系统，后来进行开源并且移植到了 Linux 操作系统中，目前 CentOS 7.x 将 XFS+LVM（逻辑卷管理）作为默认的文件系统。据官方所称，XFS 对于大文件的读写性能较好。单个文件系统最大可以支持8EB，单个文件可以支持16TB </li>
+<li><strong>swap</strong><br>swap 是 Linux 中用于交换分区的文件系统（类似于 Windows 中的虚拟内存），当内存不够用时，使用交换分区暂时替代内存。一般大小为内存的 2 倍，但是不要超过 2GB。它是 Linux 的必需分区 </li>
+<li><strong>NFS</strong><br>NFS 是网络文件系统（Network File System）的缩写，是用来实现不同主机之间文件共享的一种网络服务，本地主机可以通过挂载的方式使用远程共享的资源 </li>
+<li><strong>iso9660</strong><br>光盘的标准文件系统。Linux 要想使用光盘，必须支持 iso9660 文件系统 </li>
+<li><strong>fat</strong><br>Windows 下的 fat16 文件系统，在 Linux 中识别为 fat </li>
+<li><strong>vfat</strong><br>Windows 下的 fat32 文件系统，在 Linux 中识别为 vfat。支持最大 32GB 的分区和最大 4GB 的文件 </li>
+<li><strong>NTFS</strong><br>Windows 下的 NTFS 文件系统，不过 Linux 默认是不能识别 NTFS 文件系统的，如果需要识别， 则需要重新编译内核才能支持。 它比 fat32 文件系统更加安全， 速度更快，支持最大 2TB 的分区和最大 64GB 的文件 </li>
+<li><strong>ufs</strong><br>Sun 公司的操作系统 Solaris 和 SunOS 所采用的文件系统 </li>
+<li><strong>proc</strong><br>Linux 中基于内存的虚拟文件系统，用来管理内存存储目录/proc </li>
+<li><strong>sysfs</strong><br>和 proc 一样，也是基于内存的虚拟文件系统，用来管理内存存储目录/sys</li>
+<li><strong>tmpfs</strong><br>也是一种基于内存的虚拟文件系统，不过也可以使用 swap 交换分区</li>
+</ul>
 
     </div>
 
     
     
     
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="zyh 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="zyh 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="./tags/linux/" rel="tag"># linux</a>
-              <a href="./tags/%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" rel="tag"># 磁盘管理</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" rel="tag"># 磁盘管理</a>
           </div>
 
         
@@ -241,12 +269,9 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="./2020/12/27/essay1/" rel="prev" title="唐诗宋词">
-      <i class="fa fa-chevron-left"></i> 唐诗宋词
-    </a></div>
-      <div class="post-nav-item">
-    <a href="./2020/12/28/hexo1/" rel="next" title="hexo安装发布">
+    <a href="/2020/12/28/hexo1/" rel="next" title="hexo安装发布">
       hexo安装发布 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -307,34 +332,34 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">常见文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ext"><span class="nav-number">1.1.</span> <span class="nav-text">ext</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ext2"><span class="nav-number">1.2.</span> <span class="nav-text">ext2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ext3"><span class="nav-number">1.3.</span> <span class="nav-text">ext3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xfs"><span class="nav-number">1.4.</span> <span class="nav-text">xfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swap"><span class="nav-number">1.5.</span> <span class="nav-text">swap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NFS"><span class="nav-number">1.6.</span> <span class="nav-text">NFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iso9660"><span class="nav-number">1.7.</span> <span class="nav-text">iso9660</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fat"><span class="nav-number">1.8.</span> <span class="nav-text">fat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vfat"><span class="nav-number">1.9.</span> <span class="nav-text">vfat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NTFS"><span class="nav-number">1.10.</span> <span class="nav-text">NTFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ufs"><span class="nav-number">1.11.</span> <span class="nav-text">ufs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#proc"><span class="nav-number">1.12.</span> <span class="nav-text">proc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sysfs"><span class="nav-number">1.13.</span> <span class="nav-text">sysfs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tmpfs"><span class="nav-number">1.14.</span> <span class="nav-text">tmpfs</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">常见文件系统</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="zyh"
-      src="./images/avatar.jpg">
+      src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">zyh</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="./archives/">
+          <a href="/archives/">
         
           <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="./categories/">
+            <a href="/categories/">
           
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="./tags/">
+            <a href="/tags/">
           
         <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
@@ -394,19 +419,19 @@
   </div>
 
   
-  <script src="./lib/anime.min.js"></script>
-  <script src="./lib/velocity/velocity.min.js"></script>
-  <script src="./lib/velocity/velocity.ui.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="./js/utils.js"></script>
+<script src="/js/utils.js"></script>
 
-<script src="./js/motion.js"></script>
-
-
-<script src="./js/schemes/pisces.js"></script>
+<script src="/js/motion.js"></script>
 
 
-<script src="./js/next-boot.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
 
 
 
